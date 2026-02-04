@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="page">
+
+    
+    <section class="preview" aria-label="Phone mockup">
+      <img src="IG.jpeg" class="img floating" alt="Instagram phone mockup">
+    </section>
+
+    
+    <section class="login" aria-label="Instagram login">
+      <header class="login-header">
+        <img src="instaLogo.png" class="logo" alt="Instagram logo">
+      </header>
+
+      
+      <form class="login-form" action="#" method="post">
+
+        <label class="sr-only" for="user">
+          Телефон, имя пользователя или эл. адрес
+        </label>
+        <input id="user" name="user" type="text"
+               placeholder="Телефон, имя пользователя или эл. адрес">
+
+        <div class="password-container">
+          <label class="sr-only" for="password">Пароль</label>
+          <input type="password" id="password" name="password" placeholder="Пароль">
+          <button type="button" class="toggle-password" id="togglePassword">Показать</button>
+        </div>
+
+        <button class="btn" type="submit">Войти</button>
+
+        <div class="or" aria-label="separator">
+          <span></span>
+          <p>ИЛИ</p>
+          <span></span>
+        </div>
+
+        <a href="#" class="fb">Войти через Facebook</a>
+        <a href="#" class="forgot">Забыли пароль?</a>
+
+        <div class="signup">
+          <p>У вас нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+        </div>
+
+        <p class="apps-text">Установите приложение.</p>
+
+        <div class="apps">
+          <a class="store-link" href="https://apps.apple.com/ru/app/instagram/id389801252">
+            <img src="app_store.jpg" alt="App Store">
+          </a>
+          <a class="store-link" href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=ru">
+            <img src="google_play.jpg" alt="Google Play">
+          </a>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="#">Meta</a>
+        <a href="#">Информация</a>
+        <a href="#">Блог</a>
+        <a href="#">Вакансии</a>
+        <a href="#">Помощь</a>
+        <a href="#">API</a>
+        <a href="#">Конфиденциальность</a>
+        <a href="#">Условия</a>
+        <a href="#">Места</a>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="language-selector">
+          <label class="sr-only" for="lang">Language</label>
+          <select id="lang">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="kz">Қазақша</option>
+          </select>
+        </div>
+        <div class="copyright">© 2026 Instagram from Meta</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function () {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      this.textContent = type === 'password' ? 'Показать' : 'Скрыть';
+    });
+  </script>
+</body>
+</html>
