@@ -1,0 +1,30 @@
+<div class="card">
+  <img class="mainImg" [src]="mainImage" [alt]="product.name" />
+
+  <div class="thumbs">
+    @for (img of product.images; track img) {
+      <button class="thumbBtn" type="button" (click)="setMain(img)">
+        <img class="thumbImg" [src]="img" [alt]="product.name" />
+      </button>
+    }
+  </div>
+
+  <h3 class="name">{{ product.name }}</h3>
+  <p class="desc">{{ product.description }}</p>
+
+  <div class="row">
+    <span class="price">{{ product.price }} ₸</span>
+    <span class="rating">⭐ {{ product.rating }}</span>
+    <span class="likes">❤️ {{ product.likes }}</span>
+  </div>
+
+  <div class="actions">
+    <button class="btn" (click)="like()">Like</button>
+    <button class="btn danger" (click)="delete()">Delete</button>
+
+    <a class="btn" [href]="whatsappShareUrl" target="_blank">WhatsApp</a>
+    <a class="btn" [href]="telegramShareUrl" target="_blank">Telegram</a>
+
+    <a class="btn dark" [href]="product.link" target="_blank">Open</a>
+  </div>
+</div>
