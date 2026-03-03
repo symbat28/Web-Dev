@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+.page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 32px 0;
+}
+
+
+.preview {
+  position: relative;
+  width: 380px;
+  height: 520px;
+  margin-top: 12px;
+}
+
+.preview .img {
+  position: absolute;
+  width: 260px;
+  border-radius: 20px;
+}
+
+.preview .floating {
+  right: 0;
+  bottom: 0;
+}
+
+
+.login {
+  width: 350px;
+  background: #fff;
+  padding: 40px;
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.logo {
+  width: 175px;
+  margin-bottom: 30px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 9px 0 7px 8px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.login-form input::placeholder {
+  color: #8e8e8e;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #a8a8a8;
+}
+
+
+.password-container {
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.password-container input {
+  padding-right: 72px; 
+}
+
+.toggle-password {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.toggle-password:hover {
+  background: #f0f0f0;
+  border-color: #a8a8a8;
+}
+
+
+.btn {
+  width: 100%;
+  padding: 7px;
+  background: #0095f6;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn:hover {
+  background: #0074cc;
+}
+
+
+.or {
+  display: flex;
+  align-items: center;
+  margin: 14px 0;
+  color: #8e8e8e;
+}
+
+.or span {
+  flex: 1;
+  height: 1px;
+  background: #dbdbdb;
+}
+
+.or p {
+  margin: 0 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8e8e8e;
+}
+
+.fb {
+  color: #385185;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+  margin: 8px 0;
+}
+
+.forgot {
+  color: #00376b;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+
+.signup {
+  border-top: 1px solid #dbdbdb;
+  margin-top: 20px;
+  padding-top: 25px;
+  font-size: 14px;
+  color: #262626;
+}
+
+.signup a {
+  color: #0095f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.apps-text {
+  margin: 20px 0 10px;
+  font-size: 14px;
+  color: #262626;
+}
+
+.apps {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.apps img {
+  height: 40px;
+}
+
+.store-link {
+  display: inline-block;
+}
+
+
+.footer {
+  background: #fafafa;
+  padding: 0 16px;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 975px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0;
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #8e8e8e;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid #dbdbdb;
+}
+
+.language-selector select {
+  border: none;
+  background: transparent;
+  color: #8e8e8e;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.language-selector select:focus {
+  outline: none;
+}
+
+.copyright {
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+
+@media (max-width: 875px) {
+  .preview { display: none; }
+  .page { margin-top: 32px; }
+}
+
+@media (max-width: 450px) {
+  .login {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 0 32px;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+    padding-left: 16px;
+  }
+}
