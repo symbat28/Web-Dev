@@ -1,0 +1,27 @@
+.title {
+  margin: 18px 0 10px;
+}
+
+.cats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.catBtn {
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  cursor: pointer;
+}
+
+.catBtn.active {
+  border-color: #111;
+  font-weight: 700;
+}
+
+.hint {
+  opacity: 0.75;
+}

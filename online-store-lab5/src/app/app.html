@@ -1,0 +1,21 @@
+<h1 class="title">Online Store</h1>
+
+<div class="cats">
+  @for (c of categories; track c.id) {
+    <button
+      class="catBtn"
+      [class.active]="c.id === selectedId"
+      (click)="selectCategory(c)">
+      {{ c.name }}
+    </button>
+  }
+</div>
+
+@if (selectedId === null) {
+  <p class="hint">Select a category to see products.</p>
+} @else {
+  <app-product-list
+    [products]="selectedProducts"
+    (deleteProductId)="onDelete($event)">
+  </app-product-list>
+}

@@ -1,0 +1,61 @@
+<article class="card">
+  <div class="imageWrap">
+    <img class="mainImg" [src]="mainImage" [alt]="product.name" />
+
+    <div class="thumbs">
+      @for (img of product.images; track $index) {
+        <button
+          class="thumbBtn"
+          type="button"
+          (click)="selectImage($index)"
+          [class.active]="$index === selectedIndex"
+          aria-label="Select image"
+        >
+          <img class="thumbImg" [src]="img" [alt]="product.name + ' image'" />
+        </button>
+      }
+    </div>
+  </div>
+
+  <div class="body">
+    <h3 class="title">{{ product.name }}</h3>
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="row">
+      <div class="price">{{ product.price }} ₸</div>
+
+      <div class="rating" [title]="'Rating: ' + product.rating">
+        @for (x of [].constructor(fullStars); track $index) {
+          <span class="star filled">★</span>
+        }
+        @if (hasHalfStar) {
+          <span class="star half">☆</span>
+        }
+        @for (x of [].constructor(emptyStars); track $index) {
+          <span class="star empty">☆</span>
+        }
+        <span class="ratingNum">{{ product.rating }}</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn primary" type="button" (click)="openKaspi()">
+        Open on Kaspi
+      </button>
+
+      <button class="btn" type="button" (click)="shareWhatsApp()">
+        Share WhatsApp
+      </button>
+
+      <button class="btn" type="button" (click)="shareTelegram()">
+        Share Telegram
+      </button>
+    </div>
+      <h1>recommand</h1>
+      <button>class="</button>
+
+    <a class="kaspiLink" [href]="product.link" target="_blank" rel="noopener noreferrer">
+      Direct link
+    </a>
+  </div>
+</article>
